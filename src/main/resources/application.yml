@@ -1,2 +1,16 @@
+spring:
+  output:
+    ansi:
+      enabled: always
+
 server:
   port: 8080
+
+app:
+  security:
+    token-server-url: http://localhost:9397
+
+#Estas son las Ips que tendrán permiso de llamar a este componente la primera es  localhost
+security:
+  allowed-ips: ${ALLOWED_IPS:127.0.0.1,192.168.1.44}
+
